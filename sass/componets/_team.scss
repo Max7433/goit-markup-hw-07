@@ -1,0 +1,110 @@
+/* team ready */
+.team__list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team__headlines {
+    margin-bottom: 50px;
+    font-style: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--fontcolor-secondary);
+}
+
+.team__list-card:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team {
+    background-color: #F5F4FA
+}
+
+.team__list-card {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--fontcolor-secondary);
+    background-color: var(--backgroundcolor-header);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__article-head {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.team__article-skill {
+    padding-top: 10px;
+    font-weight: 400;
+    color: var(--fontcolor-main);
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+}
+
+.social__item {
+    width: 44px;
+    height: 44px;
+}
+
+.social__item:hover {
+    background-color: var(--accent-color);
+    transition: background-color var(--timing);
+    border-radius: 50%;
+}
+
+.social__item:focus {
+    background-color: var(--accent-color);
+    transition: background-color var(--timing);
+    border-radius: 50%;
+}
+
+.social__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    fill: #AFB1B8;
+}
+
+.social__link:hover {
+    fill: var(--fontcolor);
+    transition: fill var(--timing);
+}
+
+.social__link:focus {
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transition: background-color var(--timing);
+    fill: var(--fontcolor);
+    transition: fill var(--timing);
+}
+
+.social__item:not(:last-child) {
+    margin-right: 10px;
+}
