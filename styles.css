@@ -105,26 +105,29 @@ section {
     display: flex;
 }
 
-.header-nav {
+.header-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.list.header-nav .item.logo {
+.header-item-logo {
     margin-right: 93px;
 }
 
-.header-nav .item:not(:last-child) {
+.header-item:not(:last-child) {
     margin-right: 50px;
 }
 
 
-.list.header-nav.adress {
+.header-list__adress {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.list-link {
+.header-item__link {
     position: relative;
     display: block;
     padding-bottom: 32px;
@@ -156,8 +159,8 @@ section {
 
 }
 
-.list-link:hover,
-.list-link:focus {
+.header-item__link:hover,
+.lheader-item__link:focus {
     color: var(--accent-color);
     transition: color var(--timing);
 }
@@ -445,8 +448,6 @@ section {
     margin-right: 0%;
     top: 451px;
     left: 124px;
-    /* gap: 40px; */
-
     width: 200px;
     height: 50px;
     background: #2196F3;
@@ -462,8 +463,6 @@ section {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--fontcolor);
-
-
 }
 
 /* input style */
@@ -842,8 +841,7 @@ section {
 
 /* Portfolio card  */
 
-.work.container .list-card,
-.list {
+.card {
     display: flex;
     flex-wrap: wrap;
 
@@ -871,13 +869,13 @@ section {
     margin-bottom: 0px;
 }
 
-.card-overlay {
+.card__overlay {
     position: relative;
     overflow: hidden;
 }
 
-.card-link:hover .card-overlay:before,
-.card-link:focus .card-overlay:before {
+.card-link:hover .card__overlay:before,
+.card-link:focus .card__overlay:before {
     display: block;
     content: "";
     position: absolute;
@@ -891,7 +889,7 @@ section {
     background-color: rgba(33, 150, 243, 0.9);
 }
 
-.card-overlay:before {
+.card__overlay:before {
     display: block;
     content: "";
     position: absolute;
@@ -904,7 +902,7 @@ section {
     background-color: rgba(33, 150, 243, 0.9);
 }
 
-.overlay-text {
+.overlay__text {
     display: block;
     content: "";
     position: absolute;
@@ -925,8 +923,8 @@ section {
 
 }
 
-.card-link:hover .overlay-text,
-.card-link:focus .overlay-text {
+.card-link:hover .overlay__text,
+.card-link:focus .overlay__text {
     display: block;
     content: "";
     position: absolute;
@@ -957,7 +955,7 @@ section {
     z-index: 2;
 }
 
-.card-name {
+.data__name {
     margin-bottom: 4px;
     font-family: inherit;
     font-weight: 700;
@@ -968,7 +966,7 @@ section {
     z-index: 2;
 }
 
-.card-text {
+.data__text {
     font-family: inherit;
     font-size: 16px;
     line-height: 1.9;
@@ -977,24 +975,21 @@ section {
 }
 
 /* buttons */
-.work.container .list {
+.work-btn {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-}
-
-.work.container .list {
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.work.container .list .item:not(:last-child) {
+.work-btn__item:not(:last-child) {
     margin-right: 8px;
 }
 
-
-section .button {
+.work-button {
     line-height: 26px;
-    display: block;
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
@@ -1005,8 +1000,8 @@ section .button {
     padding: 6px 22px;
 }
 
-.button:hover,
-.button:focus {
+.work-button:hover,
+.work-button:focus {
     background-color: var(--accent-color);
     color: var(--fontcolor);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1055,7 +1050,6 @@ footer-list {
 
 .footer-list:not(:last-child) {
     margin-bottom: 9px;
-
 }
 
 .footer-address {
@@ -1070,7 +1064,6 @@ footer-list {
     letter-spacing: 0.03em;
     text-decoration: none;
     color: #ffffff;
-
 }
 
 .logo-web {
@@ -1155,7 +1148,6 @@ footer-list {
     background-color: var(--accent-color);
     border-radius: 50%;
     transition: background-color var(--timing);
-
 }
 
 .social__link-team:not(:last-child) {
@@ -1179,10 +1171,9 @@ footer-list {
     flex-direction: column;
     margin-left: 93px;
     position: relative;
-
 }
 
-.form-mail-input-footer {
+.footer-input {
     padding-left: 16px;
     width: 358px;
     height: 50px;
@@ -1193,13 +1184,13 @@ footer-list {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.form-mail-input-footer:hover {
+.footer-input:hover {
     background: #2F303A;
     border: 1px solid rgba(33, 150, 243, 0);
     transition: border var(--timing);
 }
 
-.form-mail-input-footer:focus {
+.footer-input:focus {
     background: #2F303A;
     border: 1px solid rgba(33, 150, 243, 0);
     transition: border var(--timing);
@@ -1211,7 +1202,7 @@ footer-list {
     align-items: center;
     text-align: center;
     padding-left: 29px;
-    top: 20px;
+    top: 17px;
     right: -60%;
     transform: translateY(35%);
     width: 200px;
@@ -1222,7 +1213,7 @@ footer-list {
     border-radius: 4px;
 }
 
-.footer-form-title {
+.footer-title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -1244,5 +1235,4 @@ footer-list {
     line-height: 1.9;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-
 }
